@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 17:58+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: temps/apps.py:8 temps/templates/temps/base.html:7
+#: temps/templates/temps/index.html:15
+msgid "Temperatures"
+msgstr "Températures"
+
+#: temps/models.py:7
+msgid "Sunny"
+msgstr "Beau temps"
+
+#: temps/models.py:8
+msgid "Few clouds"
+msgstr "Ciel voilé"
+
+#: temps/models.py:9
+msgid "Cloudy"
+msgstr "Nuageux"
+
+#: temps/models.py:10
+msgid "Rain"
+msgstr "Pluie"
+
+#: temps/models.py:11
+msgid "Snow"
+msgstr "Neige"
+
+#: temps/models.py:14
+msgid "Date"
+msgstr "Date"
+
+#: temps/models.py:15
+msgid "Temperature (°C)"
+msgstr "Température (°C)"
+
+#: temps/models.py:16
+msgid "Weather"
+msgstr "Météo"
+
+#: temps/models.py:17
+msgid "Wind"
+msgstr "Vent"
+
+#: temps/models.py:18
+msgid "Hail"
+msgstr "Grêle"
+
+#: temps/models.py:19
+msgid "Mist"
+msgstr "Brouillard"
+
+#: temps/models.py:20
+msgid "Snow (cm)"
+msgstr "Neige (cm)"
+
+#: temps/models.py:21
+msgid "Rain (mm)"
+msgstr "Pluie (mm)"
+
+#: temps/models.py:22
+msgid "Maximal temperature (°C)"
+msgstr "Température maximale (°C)"
+
+#: temps/models.py:23
+msgid "Notes"
+msgstr "Notes"
+
+#: temps/models.py:24
+msgid "Weight (kg)"
+msgstr "Poids (kg)"
+
+#: temps/models.py:25 temps/models.py:40
+msgid "Created"
+msgstr "Créé"
+
+#: temps/models.py:32
+msgid "Temperature record"
+msgstr "Enregistrement de température"
+
+#: temps/models.py:33
+msgid "Temperature records"
+msgstr "Enregistrements de température"
+
+#: temps/models.py:37 temps/models.py:53
+msgid "Endpoint"
+msgstr "Point de terminaison"
+
+#: temps/models.py:38
+msgid "p256dh key"
+msgstr "Clé p256dh"
+
+#: temps/models.py:39
+msgid "Auth key"
+msgstr "Clé d'authentification"
+
+#: temps/models.py:46
+msgid "Push subscription"
+msgstr "Abonnement push"
+
+#: temps/models.py:47
+msgid "Push subscriptions"
+msgstr "Abonnements push"
+
+#: temps/models.py:54
+msgid "Snooze until"
+msgstr "Différer jusqu'à"
+
+#: temps/models.py:62
+msgid "Snooze"
+msgstr "Report"
+
+#: temps/models.py:63
+msgid "Snoozes"
+msgstr "Reports"
+
+#: temps/templates/temps/index.html:4 temps/templates/temps/index.html:6
+msgid "Record temperature"
+msgstr "Enregistrer la température"
+
+#: temps/templates/temps/index.html:11
+msgid "Submit"
+msgstr "Envoyer"
+
+#: temps/templates/temps/index.html:14
+msgid "Charts"
+msgstr "Graphiques"
+
+#: temps/templates/temps/index.html:17
+msgid "Weights"
+msgstr "Poids"
+
+#: temps/templates/temps/index.html:20
+msgid "Enable reminder notifications"
+msgstr "Activer les notifications de rappel"
+
+#: temps/templates/temps/index.html:21 temps/views.py:154
+msgid "Snooze until 19:00"
+msgstr "Différer jusqu'à 19h00"
+
+#: temps/templates/temps/notify_test.html:4
+#: temps/templates/temps/notify_test.html:6
+msgid "Send a test notification"
+msgstr "Envoyer une notification de test"
+
+#: temps/templates/temps/notify_test.html:10
+msgid "Title"
+msgstr "Titre"
+
+#: temps/templates/temps/notify_test.html:11
+msgid "Test notification"
+msgstr "Notification de test"
+
+#: temps/templates/temps/notify_test.html:15
+msgid "Message"
+msgstr "Message"
+
+#: temps/templates/temps/notify_test.html:16
+msgid "This is a test notification."
+msgstr "Ceci est un test de notification."
+
+#: temps/templates/temps/notify_test.html:19
+msgid "Send"
+msgstr "Envoyer"
+
+#: temps/templates/temps/notify_test.html:23
+msgid "Results"
+msgstr "Résultats"
+
+#: temps/templates/temps/notify_test.html:27
+msgid "Back"
+msgstr "Retour"
+
+#: temps/views.py:96 temps/views.py:165
+msgid "Invalid JSON data"
+msgstr "Données JSON invalides"
+
+#: temps/views.py:100 temps/views.py:168
+msgid "Endpoint required"
+msgstr "Point de terminaison requis"
+
+#: temps/views.py:146
+#, fuzzy
+#| msgid "Invalid JSON data"
+msgid "Invalid token"
+msgstr "Données JSON invalides"
+
+#: temps/views.py:150
+msgid "today submitted"
+msgstr "aujourd'hui envoyé"
+
+#: temps/views.py:152
+msgid "Temperature reminder"
+msgstr "Rappel de température"
+
+#: temps/views.py:153
+msgid "You haven't submitted today's temperature yet."
+msgstr "Vous n'avez pas encore soumis la température d'aujourd'hui."

@@ -1,0 +1,14 @@
+{
+    "buildCommand": "bash build.sh",
+    "outputDirectory": "static",
+    "rewrites": [
+        {
+            "source": "/static/(.*)",
+            "destination": "/$1"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "api/app.py"
+        }
+    ]
+}

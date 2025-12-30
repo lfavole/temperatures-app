@@ -1,0 +1,23 @@
+name: Hourly ping
+
+on:
+  schedule:
+    # at 7:45, 8:45, ..., 21:45 during DST (UTC+1)
+    - cron: '45 6-20 * 1-3,11-12 *'
+    # at 7:45, 8.45, ..., 21:45 outside DST (UTC+2)
+    - cron: '45 5-19 * 4-10 *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping configured endpoint
+        env:
+          PING_URL: ${{ secrets.PING_URL }}
+          PING_TOKEN: ${{ secrets.PING_TOKEN }}
+        run: |
+          if [ -z "$PING_URL" ]; then
+            echo "PING_URL not set in repo secrets" && exit 1
+          fi
+          curl -fsS "$PING_URL/ping?token=$PING_TOKEN"

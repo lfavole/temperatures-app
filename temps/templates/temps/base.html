@@ -1,0 +1,16 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="{% get_current_language as lang %}{{ lang }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}{% trans "Temperatures" %}{% endblock title %}</title>
+        <link rel="icon" href="{% static "temps/icon.svg" %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@lowlighter/matcha@0/dist/matcha.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+        {% block head %}{% endblock head %}
+    </head>
+    <body>
+        {% block body %}{% endblock body %}
+    </body>
+</html>

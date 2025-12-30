@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 17:59+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: temps/static/temps/app.js:17
+msgid "Temperature (°C)"
+msgstr "Température (°C)"
+
+#: temps/static/temps/app.js:34
+msgid "Weight (kg)"
+msgstr "Poids (kg)"
+
+#: temps/static/temps/app.js:97
+msgid "Unsubscribe from reminders"
+msgstr "Se désabonner des rappels"
+
+#: temps/static/temps/app.js:97
+msgid "Enable reminder notifications"
+msgstr "Activer les notifications de rappel"
+
+#: temps/static/temps/app.js:104
+msgid "Push Notifications are not supported by this browser."
+msgstr "Les notifications push ne sont pas prises en charge par ce navigateur."
+
+#: temps/static/temps/app.js:112
+msgid "You are now unsubscribed from push notifications."
+msgstr "Vous êtes maintenant désabonné des notifications push."
+
+#: temps/static/temps/app.js:114
+#, javascript-format
+msgid "Push unsubscription failed: %s"
+msgstr "Désabonnement des notifications push échoué : %s"
+
+#: temps/static/temps/app.js:121
+msgid "Push Notifications permission was denied."
+msgstr "La permission des notifications push a été refusée."
+
+#: temps/static/temps/app.js:134
+msgid "You are now subscribed to push notifications."
+msgstr "Vous êtes maintenant abonné aux notifications push."
+
+#: temps/static/temps/app.js:137
+#, javascript-format
+msgid "Push subscription failed: %s"
+msgstr "L'abonnement aux notifications push a échoué : %s"
+
+#: temps/static/temps/app.js:151
+msgid "Reminder snoozed."
+msgstr "Rappel mis en veille."
+
+#: temps/static/temps/app.js:153
+#, javascript-format
+msgid "Error while snoozing: %s"
+msgstr "Erreur lors de la mise en veille : %s"

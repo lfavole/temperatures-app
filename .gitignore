@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtualenv
+.venv/
+env/
+venv/
+
+# Django
+db.sqlite3
+/static/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+thumbs.db
+
+# Environment files
+.env
+*.env
+
+# pyproject/build
+build/
+dist/
+*.egg-info/
+
+# uv lock file
+uv.lock
+
+# Compiled message files
+*.mo

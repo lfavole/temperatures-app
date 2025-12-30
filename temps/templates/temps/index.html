@@ -1,0 +1,27 @@
+{% extends "temps/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Record temperature" %}{% endblock title %}
+{% block body %}
+    <h1>{% trans "Record temperature" %}</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% trans "Submit" %}</button>
+    </form>
+
+    <h2>{% trans "Charts" %}</h2>
+    <h3>{% trans "Temperatures" %}</h3>
+    <canvas id="tempChart" width="600" height="200"></canvas>
+    <h3>{% trans "Weights" %}</h3>
+    <canvas id="weightChart" width="600" height="200"></canvas>
+
+    <p><button id="subscribeBtn">{% trans "Enable reminder notifications" %}</button></p>
+    <p class="snooze hidden"><button id="snoozeBtn">{% trans "Snooze until 19:00" %}</button></p>
+
+    {{ value|json_script:"temps-data" }}
+
+    <script src="{% url "temps:javascript-catalog" %}"></script>
+    <script src="{% static "temps/app.js" %}"></script>
+{% endblock body %}

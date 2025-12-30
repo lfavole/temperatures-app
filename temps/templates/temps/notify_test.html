@@ -1,0 +1,28 @@
+{% extends "temps/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Send a test notification" %}{% endblock title %}
+{% block body %}
+    <h1>{% trans "Send a test notification" %}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>{% trans "Title" %}:<br>
+                <input type="text" name="title" value="{% trans "Test notification" %}">
+            </label>
+        </p>
+        <p>
+            <label>{% trans "Message" %}:<br>
+                <textarea name="body" rows="4" cols="50">{% trans "This is a test notification." %}</textarea>
+            </label>
+        </p>
+        <p><button type="submit">{% trans "Send" %}</button></p>
+    </form>
+
+    {% if result %}
+        <h2>{% trans "Results" %}</h2>
+        <pre>{{ result|safe }}</pre>
+    {% endif %}
+
+    <p><a href="/">{% trans "Back" %}</a></p>
+{% endblock body %}
