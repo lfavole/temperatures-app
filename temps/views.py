@@ -51,11 +51,22 @@ def index(request):
             post_date = None
 
         existing_object = TemperatureRecord.objects.filter(date=post_date).first() if post_date else None
-        # compute show_weight from the submitted date so server-side validation matches client
-        show_weight = bool(post_date and post_date.weekday() == 0)
+        # instantiate form (includes non-model field yesterday_max_temp)
         form = TemperatureForm(request.POST, instance=existing_object)
         if form.is_valid():
-            form.save()
+            saved = form.save()
+            # update yesterday's max_temp if provided
+            yesterday_max = form.cleaned_data.get("yesterday_max_temp")
+            if yesterday_max is not None:
+                try:
+                    ydate = saved.date - timedelta(days=1)
+                    prev = TemperatureRecord.objects.filter(date=ydate).first()
+                    if prev:
+                        prev.max_temp = yesterday_max
+                        prev.save()
+                except Exception:
+                    # be conservative: ignore update failures
+                    pass
             return redirect("temps:index")
     else:
         form = TemperatureForm(initial={"date": initial_date.isoformat()} if initial_date else None)
@@ -64,11 +75,13 @@ def index(request):
     labels = [r.date.isoformat() for r in records]
     temps = [r.temperature for r in records]
     weights = [r.weight_kg for r in records]
+    max_temps = [r.max_temp for r in records]
 
     # Build a value payload to be injected via json_script
     value = {
         "labels": labels,
         "temps": temps,
+        "max_temps": max_temps,
         "weights": weights,
         "subscribe_url": reverse("temps:subscribe"),
         "snooze_url": reverse("temps:snooze"),
@@ -83,6 +96,7 @@ def chart_data(request):
     data = {
         "labels": [r.date.isoformat() for r in records],
         "temps": [r.temperature for r in records],
+        "max_temps": [r.max_temp for r in records],
         "weights": [r.weight_kg for r in records],
     }
     return JsonResponse(data)

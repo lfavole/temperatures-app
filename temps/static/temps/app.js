@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", async function() {
     const labels = value.labels || [];
     const temps = value.temps || [];
     const weights = value.weights || [];
+    const maxTemps = value.max_temps || [];
 
     // Temperature chart
     const tctx = document.getElementById("tempChart").getContext("2d");
@@ -13,15 +14,32 @@ window.addEventListener("DOMContentLoaded", async function() {
         type: "line",
         data: {
             labels: labels,
-            datasets: [{
-                label: gettext("Temperature (°C)"),
-                data: temps,
-                borderColor: "rgb(255, 99, 132)",
-                tension: 0.2,
-                fill: false,
-            }]
+            datasets: [
+                {
+                    label: gettext("Temperature"),
+                    data: temps,
+                    borderColor: "rgb(255, 99, 132)",
+                    tension: 0.2,
+                    fill: false,
+                },
+                {
+                    label: gettext("Max temperature"),
+                    data: maxTemps,
+                    borderColor: "rgb(255, 159, 64)",
+                    borderDash: [6, 4],
+                    tension: 0.2,
+                    fill: false,
+                }
+            ]
         },
-        options: {responsive: true},
+        options: {
+            responsive: true,
+            tooltips: {
+                callbacks: {
+                    label: (item) => `${item.yLabel}°C`,
+                },
+            },
+        },
     });
 
     // Weight chart
@@ -31,14 +49,21 @@ window.addEventListener("DOMContentLoaded", async function() {
         data: {
             labels: labels,
             datasets: [{
-                label: gettext("Weight (kg)"),
+                label: gettext("Weight"),
                 data: weights,
                 borderColor: "rgb(54, 162, 235)",
                 tension: 0.2,
                 fill: false,
             }]
         },
-        options: {responsive: true},
+        options: {
+            responsive: true,
+            tooltips: {
+                callbacks: {
+                    label: (item) => `${item.yLabel} kg`,
+                },
+            },
+        },
     });
 
     // Toggle weight field visibility based on selected date (show only on Mondays)

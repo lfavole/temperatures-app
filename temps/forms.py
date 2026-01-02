@@ -1,9 +1,13 @@
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
 from .models import TemperatureRecord
 
 
 class TemperatureForm(forms.ModelForm):
+    # will be used to update yesterday's record
+    yesterday_max_temp = forms.FloatField(required=False, label=_("Yesterday max temperature (°C)"))
+
     class Meta:
         model = TemperatureRecord
         fields = [
@@ -15,7 +19,7 @@ class TemperatureForm(forms.ModelForm):
             "mist",
             "snow_cm",
             "rain_mm",
-            "max_temp",
+            "yesterday_max_temp",
             "notes",
             "weight_kg",
         ]

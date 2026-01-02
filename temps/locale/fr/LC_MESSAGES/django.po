@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-02 13:36+0100\n"
+"POT-Creation-Date: 2026-01-02 13:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,6 +22,10 @@ msgstr ""
 #: temps/templates/temps/index.html:15
 msgid "Temperatures"
 msgstr "Températures"
+
+#: temps/forms.py:9
+msgid "Yesterday max temperature (°C)"
+msgstr "Température maximale d'hier (°C)"
 
 #: temps/models.py:7
 msgid "Sunny"
@@ -151,7 +155,7 @@ msgstr "Poids"
 msgid "Enable reminder notifications"
 msgstr "Activer les notifications de rappel"
 
-#: temps/templates/temps/index.html:21 temps/views.py:154
+#: temps/templates/temps/index.html:21 temps/views.py:165
 msgid "Snooze until 19:00"
 msgstr "Différer jusqu'à 19h00"
 
@@ -188,28 +192,26 @@ msgstr "Résultats"
 msgid "Back"
 msgstr "Retour"
 
-#: temps/views.py:96 temps/views.py:165
+#: temps/views.py:107 temps/views.py:176
 msgid "Invalid JSON data"
 msgstr "Données JSON invalides"
 
-#: temps/views.py:100 temps/views.py:168
+#: temps/views.py:111 temps/views.py:179
 msgid "Endpoint required"
 msgstr "Point de terminaison requis"
 
-#: temps/views.py:146
-#, fuzzy
-#| msgid "Invalid JSON data"
+#: temps/views.py:157
 msgid "Invalid token"
-msgstr "Données JSON invalides"
+msgstr "Jeton invalide"
 
-#: temps/views.py:150
+#: temps/views.py:161
 msgid "today submitted"
 msgstr "aujourd'hui envoyé"
 
-#: temps/views.py:152
+#: temps/views.py:163
 msgid "Temperature reminder"
 msgstr "Rappel de température"
 
-#: temps/views.py:153
+#: temps/views.py:164
 msgid "You haven't submitted today's temperature yet."
 msgstr "Vous n'avez pas encore soumis la température d'aujourd'hui."

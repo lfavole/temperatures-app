@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-30 17:59+0100\n"
+"POT-Creation-Date: 2026-01-02 13:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,53 +18,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: temps/static/temps/app.js:17
-msgid "Temperature (°C)"
-msgstr "Température (°C)"
+#: temps/static/temps/app.js:19
+msgid "Temperature"
+msgstr "Température"
 
-#: temps/static/temps/app.js:34
-msgid "Weight (kg)"
-msgstr "Poids (kg)"
+#: temps/static/temps/app.js:26
+msgid "Max temperature"
+msgstr "Température maximale"
 
-#: temps/static/temps/app.js:97
+#: temps/static/temps/app.js:52
+msgid "Weight"
+msgstr "Poids"
+
+#: temps/static/temps/app.js:122
 msgid "Unsubscribe from reminders"
 msgstr "Se désabonner des rappels"
 
-#: temps/static/temps/app.js:97
+#: temps/static/temps/app.js:122
 msgid "Enable reminder notifications"
 msgstr "Activer les notifications de rappel"
 
-#: temps/static/temps/app.js:104
+#: temps/static/temps/app.js:129
 msgid "Push Notifications are not supported by this browser."
 msgstr "Les notifications push ne sont pas prises en charge par ce navigateur."
 
-#: temps/static/temps/app.js:112
+#: temps/static/temps/app.js:137
 msgid "You are now unsubscribed from push notifications."
 msgstr "Vous êtes maintenant désabonné des notifications push."
 
-#: temps/static/temps/app.js:114
+#: temps/static/temps/app.js:139
 #, javascript-format
 msgid "Push unsubscription failed: %s"
 msgstr "Désabonnement des notifications push échoué : %s"
 
-#: temps/static/temps/app.js:121
+#: temps/static/temps/app.js:146
 msgid "Push Notifications permission was denied."
 msgstr "La permission des notifications push a été refusée."
 
-#: temps/static/temps/app.js:134
+#: temps/static/temps/app.js:159
 msgid "You are now subscribed to push notifications."
 msgstr "Vous êtes maintenant abonné aux notifications push."
 
-#: temps/static/temps/app.js:137
+#: temps/static/temps/app.js:162
 #, javascript-format
 msgid "Push subscription failed: %s"
 msgstr "L'abonnement aux notifications push a échoué : %s"
 
-#: temps/static/temps/app.js:151
+#: temps/static/temps/app.js:176
 msgid "Reminder snoozed."
 msgstr "Rappel mis en veille."
 
-#: temps/static/temps/app.js:153
+#: temps/static/temps/app.js:178
 #, javascript-format
 msgid "Error while snoozing: %s"
 msgstr "Erreur lors de la mise en veille : %s"
